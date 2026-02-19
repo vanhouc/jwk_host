@@ -6,10 +6,6 @@ async fn main() {
     #[cfg(debug_assertions)]
     dotenvy::dotenv().ok();
 
-    for (key, value) in std::env::vars() {
-        println!("{key}: {value}");
-    }
-
     // Load JWK set from environment variables
     let jwk_set = jwk_set_from_env();
 
